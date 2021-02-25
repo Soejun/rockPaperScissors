@@ -4,7 +4,7 @@ function computerPlay(){
     let compChoices = ['Rock', 'Paper', 'Scissors']; //Creates an array of rock, paper, scissor choices
     let finChoice = Math.floor(Math.random() * compChoices.length);
 
-    return compChoices([random]);
+    return compChoices[finChoice];
 }
 
-console.log(computerPlay)
+console.log(computerPlay());
