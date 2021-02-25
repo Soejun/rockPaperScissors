@@ -1,10 +1,31 @@
 //rockPaperscissors
 
 function computerPlay(){
+    //computer picks (randomly) between rock paper scissors
     let compChoices = ['Rock', 'Paper', 'Scissors']; //Creates an array of rock, paper, scissor choices
     let finChoice = Math.floor(Math.random() * compChoices.length);
 
     return compChoices[finChoice];
 }
 
-console.log(computerPlay());
+function userPlay(){
+    //Gets user input from the user
+    let playerChoice = window.prompt("Pik one: Rock, paper, or scissors?");
+    return playerChoice;
+}
+
+
+function playGame(computerPlay, userPlay){
+
+    let player = userPlay().toUpperCase;
+    let computer = computerPlay().toUpperCase;
+
+    if(player == computer){
+        return "Tie! ${player} is the same as ${computer}."
+    }
+
+    
+
+}
+//console.log(computerPlay()); //Test to see if computerPlay works
+console.log(playGame);
