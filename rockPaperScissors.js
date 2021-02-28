@@ -21,7 +21,19 @@ function playGame(uTest1, uTest2){
     let computer = uTest2.toUpperCase();
 
     if(player == computer){
-        return `Tie! ${player} is the same as ${computer}.`
+        return `Tie! ${player} is the same as ${computer}.`;
+    }else if(player == "SCISSORS" && computer == "ROCK"){
+        return `You lose! Rock beats scissors!`;
+    }else if(player == "ROCK" && computer =="SCISSORS"){
+        return `You win! Rock beats scissors!`;
+    }else if(player == "PAPER" && computer == "SCISSORS"){
+        return `You lose! Scissors beats paper!`;
+    }else if(player =="SCISSORS" && computer == "PAPER"){
+        return `You win! Scissors beats paper!`;
+    }else if(player == "ROCK" && computer == "PAPER"){
+        return `You lose! Paper beats rock!`;
+    }else if(player == "PAPER" && computer == "ROCK"){
+        return `You win! Paper beats rock!"`
     }
 
 }
