@@ -10,22 +10,21 @@ function computerPlay(){
 
 function userPlay(){
     //Gets user input from the user
-    let playerChoice = window.prompt("Pik one: Rock, paper, or scissors?");
+    let playerChoice = window.prompt("Pick one: Rock, paper, or scissors?");
     return playerChoice;
 }
 
 
-function playGame(computerPlay, userPlay){
+function playGame(uTest1, uTest2){
 
-    let player = userPlay().toUpperCase;
-    let computer = computerPlay().toUpperCase;
+    let player = uTest1.toUpperCase();
+    let computer = uTest2.toUpperCase();
 
     if(player == computer){
-        return "Tie! ${player} is the same as ${computer}."
+        return `Tie! ${player} is the same as ${computer}.`
     }
-
-    
 
 }
 //console.log(computerPlay()); //Test to see if computerPlay works
-console.log(playGame);
+
+console.log(playGame(computerPlay(), userPlay()));
