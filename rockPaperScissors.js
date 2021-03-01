@@ -20,8 +20,8 @@ function playGame(uTest1, uTest2){
     let player = uTest1.toUpperCase();
     let computer = uTest2.toUpperCase();
 
-    if(player == computer){
-        return `Tie! ${player} is the same as ${computer}.`;
+    if(player == "computer"){
+        return `Tie!`;
     }else if(player == "SCISSORS" && computer == "ROCK"){
         return `You lose! Rock beats scissors!`;
     }else if(player == "ROCK" && computer =="SCISSORS"){
