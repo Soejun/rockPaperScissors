@@ -20,7 +20,8 @@ function playGame(uTest1, uTest2){
     let player = uTest1.toUpperCase();
     let computer = uTest2.toUpperCase();
 
-    if(player == "computer"){
+
+    if(player == computer){
         return `Tie!`;
     }else if(player == "SCISSORS" && computer == "ROCK"){
         return `You lose! Rock beats scissors!`;
@@ -33,10 +34,44 @@ function playGame(uTest1, uTest2){
     }else if(player == "ROCK" && computer == "PAPER"){
         return `You lose! Paper beats rock!`;
     }else if(player == "PAPER" && computer == "ROCK"){
-        return `You win! Paper beats rock!"`
-    }
+        return `You win! Paper beats rock!`;
+    
 
 }
+}
+function game(){
+    //Sets rounds of rock paper scissors and displays score of user and computer by the end of the game
+    let roundsPlayed;
+    let playerWin = 0;
+    let computerWin = 0;
+    let winLose;
+
+    for(roundsPlayed = 0; roundsPlayed < 5; roundsPlayed++){
+        //console.log(playGame(userPlay(),computerPlay()));
+        winLose = playGame(userPlay(),computerPlay());
+        console.log(winLose);
+     if(winLose.includes("win")){
+            playerWin++;
+        }else if(winLose.includes("lose")){
+            computerWin++;
+        }else{
+            playerWin = playerWin;
+            computerWin = computerWin;
+        }
+    }
+    console.log(`Game over! Player: ${playerWin} Computer: ${computerWin}`);
+    if(playerWin > computerWin){
+        console.log("You win!");
+    }else if(computerwin < playerWin){
+        console.log("You lose!");
+    }else{
+        console.log("Tie!");        
+    }
+}
+ 
+
 //console.log(computerPlay()); //Test to see if computerPlay works
 
-console.log(playGame(computerPlay(), userPlay()));
+//console.log(playGame(computerPlay(), userPlay()));
+
+console.log(game());
